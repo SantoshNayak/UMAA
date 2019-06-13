@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="umaa.uu.mca.activities.UploadEventsActivity">
+    <Button
+        android:id="@+id/events_button_choose_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose File"/>
+    <EditText
+        android:id="@+id/events_edit_text_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/events_button_choose_image"
+        android:hint="Enter description"
+        android:layout_marginStart="16dp"/>
+
+    <Spinner
+        android:id="@+id/events_upload_spinnerGenres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/events_edit_text_file_name"
+        android:entries="@array/generes"
+        android:layout_marginTop="16dp"></Spinner>
+    <ImageView
+        android:id="@+id/events_upload_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/events_upload_progress_bar"
+        android:layout_below="@id/events_upload_spinnerGenres"
+        android:layout_marginTop="16dp"/>
+     <ProgressBar
+         android:id="@+id/events_upload_progress_bar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/events_button_upload"
+         android:layout_alignParentStart="true"
+         android:layout_marginBottom="16dp"
+         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+         />
+    <Button
+        android:id="@+id/events_button_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+    <TextView
+        android:id="@+id/events_text_view_show_uploads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/events_button_upload"
+        android:layout_alignTop="@+id/events_button_upload"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@id/events_button_upload"
+        android:text="Show Uploads"
+        android:textSize="16sp"
+        android:gravity="center"
+        />
+
+</RelativeLayout>
